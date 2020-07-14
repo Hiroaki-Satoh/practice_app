@@ -72,3 +72,6 @@ gem "refile-mini_magick"
 
 # devise
 gem 'devise'
+
+# debug
+gem 'pry-byebug'
