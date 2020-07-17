@@ -10,6 +10,24 @@
   </head>
 
   <body>
+    <!-- ヘッダーの記述 -->
+    <header class = "navbar navbar-fixed-top navbar-inverse">
+      <div class = "container">
+        <nav class = "nav navbar-nav navbar-left">
+          <span class = "glyphicon glyphicon-book"></span>
+          <span>Bookers</span>
+        </nav>
+        <nav>
+          <ul class = "nav navbar-nav navbar-right">
+            <li><%= link_to ' home', root_path, class: 'glyphicon glyphicon-home home' %></li>
+            <li><%= link_to ' about', homes_about_path, class: 'glyphicon glyphicon-link about' %></li>
+            <li><%= link_to ' sign up', root_path, class: 'glyphicon glyphicon-edit sign_up' %></li>
+            <li><%= link_to ' login', root_path, class: 'glyphicon glyphicon-log-in sign_in' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ヘッダーの記述 ここまで -->
     <%= yield %>
   </body>
 </html>
