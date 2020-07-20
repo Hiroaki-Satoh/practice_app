@@ -1,3 +1,4 @@
+# deviseのコントローラに修正が必要なときは、application_controllerに記述する。
 class ApplicationController < ActionController::Base
   # デバイス機能実行前にconfigure_permitted_parametersを実行する。
   before_action :configure_permitted_parameters, if: :devise_controller?
