@@ -1,0 +1,32 @@
+<!-- ユーザ情報編集ページ -->
+<div class = "container">
+  <div class = "row">
+  	<div class = "col-xs-6">
+      <h2>User info</h2>
+
+      <%= form_for(@user) do |f| %>
+        <!-- バリデーションエラーメッセージの表示 -->
+        <%= render 'layouts/error_masseges', model: @user %>
+
+        <div class = "field">
+          <%= f.label :image %><br>
+          <%= f.attachment_field :profile_image, class: "form-controll-file" %>
+        </div>
+
+        <div class = "field">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, placeholder: "Your name", class: "form-control" %>
+        </div>
+
+        <div class = "field">
+          <%= f.label :introduction %><br>
+          <%= f.text_area :introduction, placeholder: "introduction", class: "form-control" %>
+        </div>
+
+        <div class = "actions">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

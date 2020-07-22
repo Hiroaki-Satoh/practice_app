@@ -1,0 +1,11 @@
+<!-- バリデーションエラーメッセージの表示 部分テンプレート -->
+<% if model.errors.any? %>
+		<div id="error_explanation" class="alert alert-danger">
+  		<ul>
+  			<h3><%= model.errors.count %>error occurrence</h3>
+    		<% model.errors.full_messages.each do |message| %>
+        	<li><%= message %></li>
+      	<% end %>
+    	</ul>
+  	</div>
+<% end %>
