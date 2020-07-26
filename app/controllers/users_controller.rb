@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  # 詳細ページの表示
+  # 詳細ページ(マイページ）の表示
   def show
   	@user = User.find(params[:id])
   	@books = @user.books
