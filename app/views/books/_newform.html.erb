@@ -1,0 +1,22 @@
+<!-- 投稿データ入力フォーム 部分テンプレート -->
+
+<%# バリデーションエラーメッセージの表示 %>
+<%= render 'layouts/error_masseges', model: @book %>
+
+<%= form_for(book) do |f| %>
+  <div class = "form cleafix">
+    <div class = "field row">
+	  <%= f.label :title %>
+	  <%= f.text_field :title, class: "col-xs-12 book_title" %>
+    </div>
+
+	<div class = "field row">
+	  <%= f.label :opinion %>
+	  <%= f.text_area :body, class: "col-xs-12 book_body" %>
+	</div>
+
+    <div class = "actions row">
+	  <%= f.submit class: "btn btn-primary col-xs-12" %>
+    </div>
+  </div>
+<% end %>
