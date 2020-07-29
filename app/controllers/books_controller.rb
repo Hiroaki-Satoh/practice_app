@@ -15,9 +15,9 @@ class BooksController < ApplicationController
   end
 
   def create
-  	@book = Book.new(book_params) #Bookモデルのテーブルを使用しているのでbookコントローラで保存する。
+  	@book = Book.new(book_params) # Bookモデルのテーブルを使用しているのでbookコントローラで保存する。
     @book.user_id = current_user.id
-  	if @book.save #入力されたデータをdbに保存する。
+  	if @book.save # 入力されたデータをdbに保存する。（ここでセーブされる）
   		redirect_to @book, notice: "successfully created book!"#保存された場合の移動先を指定。
   	else
   		@books = Book.all
@@ -34,13 +34,12 @@ class BooksController < ApplicationController
     end
   end
 
-
-
   def update
   	@book = Book.find(params[:id])
+    # if文でエラー発生時と正常時のリンク先を枝分かれにしている。
   	if @book.update(book_params)
   		redirect_to book_path(@book), notice: "successfully updated book!"
-  	else #if文でエラー発生時と正常時のリンク先を枝分かれにしている。
+  	else
       @edit_book = @book
   		render "edit"
   	end
@@ -58,7 +57,7 @@ class BooksController < ApplicationController
   end
 
   def book_params
-  	params.require(:book).permit(:title, :body)
+  	params.require(:book).permit(:title, :body, :book_image)
   end
 
 end

@@ -6,7 +6,7 @@
 
       <%= form_for(@user) do |f| %>
         <%# バリデーションエラーメッセージの表示 %>
-        <%= render 'layouts/error_masseges', model: @user %>
+        <%= render 'layouts/error_messages', model: @user %>
 
         <div class = "field">
           <%= f.label :image %><br>

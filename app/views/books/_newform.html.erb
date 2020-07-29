@@ -4,6 +4,11 @@
 <%= render 'layouts/error_messages', model: @book %>
 
 <%= form_for(book) do |f| %>
+  <div class = "field row">
+    <%= f.label :book_image %><br>
+    <%= f.attachment_field :book_image, class: "form-controll-file" %>
+  </div>
+
   <div class = "form cleafix">
     <div class = "field row">
 	  <%= f.label :title %>
