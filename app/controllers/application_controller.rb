@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # デバイス機能実行前にconfigure_permitted_parametersを実行する。
   before_action :configure_permitted_parameters, if: :devise_controller?
   # ログインしている時のみ実行を許可する
-  before_action :authenticate_user!,{ except: [:top, :about] }
+  before_action :authenticate_user!,{ except: [:home, :about] }
 
  # protected => 他のコントローラで呼び出された場合でも参照できる。
   protected
