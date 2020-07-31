@@ -29,3 +29,31 @@ User.create!(
   profile_image: open("./app/assets/images/user_profile3.png"),
   introduction: "Test User"
 )
+
+Book.create!(
+  user_id: 1,
+  book_image: open("./app/assets/images/book1.png"),
+  title: "Anniversary",
+  body: "by John"
+)
+
+Book.create!(
+  user_id: 1,
+  book_image: open("./app/assets/images/book2.png"),
+  title: "Low",
+  body: "by John"
+)
+
+Book.create!(
+  user_id: 2,
+  book_image: open("./app/assets/images/book3.png"),
+  title: "Nobel",
+  body: "by Alice"
+)
+
+Book.create!(
+  user_id: 2,
+  book_image: open("./app/assets/images/book4.png"),
+  title: "Music",
+  body: "by Alice"
+)
