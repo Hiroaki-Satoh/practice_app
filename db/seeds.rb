@@ -21,3 +21,11 @@ User.create!(
   profile_image: open("./app/assets/images/user_profile2.jpg"),
   introduction: "Hi! I'm Alice!!"
 )
+
+User.create!(
+  name: "Test_user",
+  email: "mail3@example",
+  password: "password",
+  profile_image: open("./app/assets/images/user_profile3.png"),
+  introduction: "Test User"
+)
