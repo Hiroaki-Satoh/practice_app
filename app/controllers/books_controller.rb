@@ -2,16 +2,15 @@ class BooksController < ApplicationController
   # ログインユーザにのみ許可
   before_action :authenticate_user!
   before_action :set_user
+  before_action :new_book, only: [:index, :show, :edit]
 
   def index
-  	@books = Book.all     # 一覧表示するためにBookモデルの情報を全てくださいのall
-    @book = Book.new
+  	@books = Book.all # 一覧表示するためにBookモデルの情報を全取得
   end
 
   def show
   	@show_book = Book.find(params[:id])
     @user = @show_book.user
-    @book = Book.new
   end
 
   def create
@@ -28,7 +27,6 @@ class BooksController < ApplicationController
 
   def edit
   	@edit_book = Book.find(params[:id])
-    @book = Book.new
     if current_user != @edit_book.user
       redirect_to books_path
     end
@@ -54,6 +52,10 @@ class BooksController < ApplicationController
   private
   def set_user
   	@user = current_user
+  end
+
+  def new_book
+    @book = Book.new
   end
 
   def book_params
