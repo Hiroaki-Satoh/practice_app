@@ -7,6 +7,8 @@ class User < ApplicationRecord
   attachment :profile_image, destroy: false
 
   has_many :books
+  # いいね機能
+  has_many :favorites, dependent: :destroy
 
   #バリデーションは該当するモデルに設定する。エラーにする条件を設定できる。
   validates :name, length: {maximum: 20, minimum: 2}
