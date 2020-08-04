@@ -19,6 +19,8 @@
 		  </td>
 		  <td><%= link_to @show_book.title, @book %></td>
 		  <td><%= @show_book.body %></td>
+		  <%# いいねの表示 %>
+		  <%= render 'favorites/favorite', book: @show_book %>
 
 		  <%# Book投稿者本人だった場合に表示する %>
 		  <% if @show_book.user_id == current_user.id %>
