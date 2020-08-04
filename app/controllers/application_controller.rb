@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   # ログインしている時のみ実行を許可する
   before_action :authenticate_user!,{ except: [:home, :about] }
 
- # protected => 他のコントローラで呼び出された場合でも参照できる。
+  # protected => 他のコントローラで呼び出された場合でも参照できる。
   protected
   # ログイン（sign_in）後の遷移先の変更
   def after_sign_in_path_for(resource)
