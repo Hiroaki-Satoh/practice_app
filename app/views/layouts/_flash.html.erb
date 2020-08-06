@@ -1,7 +1,7 @@
 <%# フラッシュメッセージの表示 部分テンプレート %>
 <div class = "container">
   <div class = "row">
-    <% if notice%>
+    <% if notice %>
 	  <div class = "flash notice">
 	    <span id = "notice"><%= notice %></span>
 	  </div>
@@ -10,7 +10,7 @@
   	    <span id = "success"><%= flash[:success] %></span>
 	  </div>
     <% elsif flash[:alert] %>
-	  <div class = "flash danger">
+	  <div class = "flash alert">
 	    <span id = "alert"><%= flash[:alert] %></span>
 	  </div>
     <% end %>
