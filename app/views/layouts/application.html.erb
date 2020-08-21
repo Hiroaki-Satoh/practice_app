@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PracticeApp</title>
+    <title>Bookers</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <%# ヘッダーの部分テンプレート呼び出し %>
+    <%= render 'layouts/header'%>
+
+    <%# フラッシュメッセージの表示 部分テンプレート呼び出し %>
+    <%= render 'layouts/flash'%>
+
     <%= yield %>
+
   </body>
 </html>

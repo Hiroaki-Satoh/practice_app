@@ -1,0 +1,16 @@
+<%# 投稿編集ページ %>
+<div class = "container">
+  <div class = "row">
+    <%# バリデーションエラーメッセージの表示 %>
+    <%= render 'layouts/error_messages', model: @edit_book %>
+  </div>
+
+  <div class = "row">
+    <div class = "col-md-6 col-md-offset-3">
+      <h1>Editing Book</h1>
+      <%= render "books/newform", book: @edit_book %>
+      <%= link_to "Show", @edit_book, class: "book_#{@edit_book.id}" %>
+      <%= link_to "Back", books_path, class: "back" %>
+    </div>
+    <div class = "col-md-3"></div>
+</div>
