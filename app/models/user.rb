@@ -6,9 +6,12 @@ class User < ApplicationRecord
 
   attachment :profile_image, destroy: false
 
+  # 本の感想投稿機能
   has_many :books
-  # いいね機能
+  # いいね機能を追加
   has_many :favorites, dependent: :destroy
+  # コメント機能を追加
+  has_many :post_comments, dependent: :destroy
 
   #バリデーションは該当するモデルに設定する。エラーにする条件を設定できる。
   validates :name, length: {maximum: 20, minimum: 2}
