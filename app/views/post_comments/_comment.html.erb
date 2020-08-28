@@ -1,5 +1,5 @@
 <%# コメント表示 部分テンプレート %>
-<h5>コメント一覧</h5>
+<h5><strong>Comments(<%= book.post_comments.count %>)</strong></h5>
 <% book.post_comments.each do |post_comment| %>
   <div class = "avatar">
     <%= attachment_image_tag(post_comment.user, :profile_image, :size => '40x40', fallback: "no-image.jpg") %>

@@ -1,5 +1,5 @@
 <%# コメント投稿フォーム 部分テンプレート %>
-<%= form_for [show_book, post_comment] do |f| %>
+<%= form_with(model:[book, post_comment]) do |f| %>
   <div class = "row">
 	<div class = "col-sm-12">
       <%= f.text_area :comment, rows:'5', class: "form-control" %>
