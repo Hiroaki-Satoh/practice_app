@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   	# 投稿へのいいね機能
   	resource :favorites,     only: [:create, :destroy]
   	# 投稿へのコメント機能
-  	resource :post_commnets, only: [:create, :destroy]
+  	resource :post_comments, only: [:create, :destroy]
   end
 end
