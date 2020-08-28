@@ -32,9 +32,9 @@
 		</tr>
 	  </table>
 	  <%# コメント一覧表示 %>
-	  <%= render 'post_comment/comment', book: @show_book %>
+	  <%= render 'post_comments/comment', book: @show_book %>
 	  <%# コメント新規作成フォーム %>
-	  <%= render 'post_comment/newform', book: @show_book, post_comment: @comment %>
+	  <%= render 'post_comments/newform', book: @show_book, post_comment: @comment %>
 	</div>
   </div>
 </div>
