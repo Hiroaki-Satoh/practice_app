@@ -21,7 +21,6 @@
 		  <td><%= @show_book.body %></td>
 		  <%# いいねの表示 %>
 		  <%= render 'favorites/favorite', book: @show_book %>
-
 		  <%# Book投稿者本人だった場合に表示する %>
 		  <% if @show_book.user_id == current_user.id %>
 			<td><%= link_to "Edit",edit_book_path(@show_book),
@@ -30,9 +29,12 @@
 			  "本当に削除してもよろしいですか？"}, class: "btn-sm btn-danger destroy_book_#{@show_book.id}" %></td>
 		  <% end %>
 		  <%# ---------------------------- %>
-
 		</tr>
 	  </table>
+	  <%# コメント一覧表示 %>
+	  <%= render 'post_comments/comment', book: @show_book %>
+	  <%# コメント新規作成フォーム %>
+	  <%= render 'post_comments/newform', book: @show_book, post_comment: @comment %>
 	</div>
   </div>
 </div>
