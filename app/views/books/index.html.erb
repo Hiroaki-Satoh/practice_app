@@ -35,6 +35,8 @@
 				<td><%= book.body %></td>
 				<%# いいねの表示 %>
 				<%= render 'favorites/favorite', book: book %>
+				<%# コメント数の表示 %>
+				<td>コメント(<%= book.post_comments.count %>)</td>
 			  </tr>
 			<% end %>
 		  </tbody>
