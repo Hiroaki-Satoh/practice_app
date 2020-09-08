@@ -15,7 +15,7 @@
 
     <%# フォロー・フォロワーの項目を追加 %>
     <tr>
-	  <th>follows</th>
+      <th>follows</th>
       <th><%= link_to user.follower.count, user_follows_path(user) %></th>
   	</tr>
   	<tr>
@@ -36,7 +36,7 @@
   </div>
 
   <div class = "row">
-	<%= link_to '',edit_user_path(user),
+    <%= link_to '', edit_user_path(user),
 	  class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_#{user.id}" %>
   </div>
 </div>
