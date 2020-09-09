@@ -1,7 +1,11 @@
 <%#　自分をフォローしているユーザの一覧表示 %>
-<h2>Follower Users</h2>
-<% if @users.count > 0 %>
-  <%= render 'follow', users: @users %>
-<% else %>
-  <p>ユーザーはいません</p>
-<% end %>
+<div class = "container">
+  <div class = "row">
+    <h2>Follower Users</h2>
+    <% if @users.count > 0 %>
+      <%= render 'follow', users: @users %>
+    <% else %>
+      <p>ユーザーはいません</p>
+    <% end %>
+  </div>
+</div>
